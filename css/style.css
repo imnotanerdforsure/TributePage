@@ -1,0 +1,9 @@
+html, body, main, section, header, div, article, aside, figure, figcaption, image, iframe, h1, h2, h3, h4, h5, h6, p, table, blockquote {
+  margin: 0;
+  padding: 0;
+}
+div{
+  border: 2px dotted red;
+}
+section{
+  border: 4px dotted green;
