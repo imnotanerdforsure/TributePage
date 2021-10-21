@@ -1,9 +1,147 @@
+/* CSS Variables */
+ :root{
+  --primary:#ddd;
+  --dark:#333;
+  --light:#fff;
+  --shadow:4px 4px 8px #000;
+  --shadow2: 0 0 25px #000;
+  --hoverblue: #71eded;
+}
 html, body, main, section, header, div, article, aside, figure, figcaption, image, iframe, h1, h2, h3, h4, h5, h6, p, table, blockquote {
   margin: 0;
   padding: 0;
 }
-div{
-  border: 2px dotted red;
+
+body{
+ background-color: orange;
 }
-section{
-  border: 4px dotted green;
+
+/* main-nav */
+.main-nav{
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 13fr 3fr;
+  align-items: center;
+}
+ul{
+  display: grid;
+  list-style: none;
+  grid-gap: 30px;
+  padding: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  margin-left: 120px;
+  background-color: lightwhite;
+}
+.social-media{
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.social-media i:hover{
+  background:var(--hoverblue);
+}
+.dark:hover{
+  background-color: var(--hoverblue);
+}
+ul a{
+  text-decoration: none;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-shadow: var(--shadow);
+  color: white;
+}
+ul a:hover{
+  color: var(--hoverblue);
+  }
+@media screen and (max-width: 767px){
+  .main-nav{grid-template-columns: 10fr 4fr;}
+  .main-nav ul{grid-gap: 0px;
+               margin-left: 0px;}
+}
+
+/* titel img and titel-text */
+.top-container{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("/img/Titel.jpg");
+  /* background-image: url("/img/Titel.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+ background-position: center;
+  height: 600px;
+}
+.btn{
+  font-size: 23px;
+  color: white;
+}
+.btn:hover{
+  color: var(--hoverblue);
+}
+.dark:hover{
+  color: var(--hoverblue);
+}
+.showcase{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-shadow: var(--shadow);
+  text-align: center;
+}
+.showcase h1{
+  font-size: 80px;
+  margin-top: 45px;
+  margin-bottom: 35px;
+  color: var(--shadow2);
+}
+.showcase p{
+  font-size: 20px;
+   margin-left: 100px;
+   margin-right: 100px;
+}
+@media screen and (max-width: 767px) {
+.showcase h1 {font-size: 60px;}
+.showcase p {margin-left: 50px; margin-right: 50px;}
+}
+
+/* boxes */
+.boxes{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  grid-gap: 10px;
+  margin: 20px;
+}
+.box{
+background:#FFBF00  ;
+text-align: center;
+padding: 0.5rem 0.2rem;
+box-shadow: var(--shadow);
+}
+.box:hover{
+  background:  #71eded  ;
+}
+
+/* info */
+.info img{
+  width: 100%;
+}
+.info{
+  margin:20px;
+}
+.pils, .weizen, .helles{
+  margin-bottom: 40px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: var(--shadow);
+  background: #FFBF00;
+  box-shadow: var(--shadow);
+}
+p{
+  margin-top: 20px;
+}
+footer{
+  margin: 20px;
+}
